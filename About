@@ -1,0 +1,43 @@
+Proctor Management Module Project
+
+Member
+1.Chotika Banditphat 5310610620
+2.Supanut Supamitgijja 5410610728
+3.Ratithorn Visavajuntrarom 5410610967
+4.Papichaya Pattaralikitsakul 5410611965
+5.Mookravee Chewtrakul 5410613128
+6.Suchanaree Jenyuthana 5410613326
+
+Requirements
+1.Add an invigilator
+2.Manage an invigilator
+3.Manage an invigilator to examination room by automatically
+4.Search an invigilator's name and examination room
+
+User Stories
+Feature: Add an invigilator
+    As an admin
+    So that I can add the invigilator
+    I want to add the invigilator to examination room by automatically
+    
+Feature: Manage an invigilator
+    As an admin
+    So that I can manage an invigilator
+    I want to edit, delete, and insert the invigilator to proctor management module
+    
+Feature: Manage an invigilator to examination room (manual)
+    As an admin
+    So that I can manage the examination room
+    I want to edit, delete, and insert the invigilator room
+    
+Feature: Search invigilator's name and examination room
+    As an user and admin
+    So that I can search information from database
+    I want to search name or examination room from database
+    
+Link
+Pivotal Tracker :  https://www.pivotaltracker.com/n/projects/1298596
+GitHub : https://github.com/chotika/term-project
+
+ER-diagram
+https://www.dropbox.com/s/l0hxe55dh3rftcu/ER-Proctor.png?dl=0
