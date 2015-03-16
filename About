@@ -41,3 +41,38 @@ GitHub : https://github.com/chotika/term-project
 
 ER-diagram
 https://www.dropbox.com/s/l0hxe55dh3rftcu/ER-Proctor.png?dl=0
+https://www.dropbox.com/lightbox/home/Apps/drawio?select=ER-Proctor.png
+
+
+%h2 Member
+            %ul
+              %li
+                %h4 Chotika Banditphat
+                %p
+                  5310610620
+                  %br Computer Engineering
+              %li
+                %h4 Supanut Supamitgijja
+                %p
+                  5410610728
+                  %br Computer Engineering
+              %li
+                %h4 Ratithorn Visavajuntrarom
+                %p
+                  5410610967
+                  %br Computer Engineering
+              %li
+                %h4 Papichaya Pattaralikitsakul
+                %p
+                  5410611965
+                  %br Computer Engineering
+              %li
+                %h4 Mookravee Chewtrakul
+                %p
+                  5410613128
+                  %br Computer Engineering  
+              %li
+                %h4 Suchanaree Jenyuthana
+                %p
+                  5410613326
+                  %br Computer Engineering 
