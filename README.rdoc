@@ -1,4 +1,4 @@
-#http://git.heroku.com/rocky-crag-7771.git
+#http://shielded-shelf-8311.herokuapp.com/
 
 == Welcome to Rails
 
