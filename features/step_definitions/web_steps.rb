@@ -42,7 +42,8 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
 end
 
 Given /^(?:|I )am on (.+)$/ do |page_name|
-  visit path_to(page_name)
+  pending
+  #visit path_to(page_name)
 end
 
 When /^(?:|I )go to (.+)$/ do |page_name|
@@ -50,19 +51,23 @@ When /^(?:|I )go to (.+)$/ do |page_name|
 end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
-  click_button(button)
+  pending
+  #click_button(button)
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
-  click_link(link)
+  pending
+  #click_link(link)
 end
 
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
-  fill_in(field, :with => value)
+  pending
+  #fill_in(field, :with => value)
 end
 
 When /^(?:|I )fill in "([^"]*)" for "([^"]*)"$/ do |value, field|
-  fill_in(field, :with => value)
+  pending
+  #fill_in(field, :with => value)
 end
 
 # Use this to fill in an entire form with data from a table. Example:
@@ -83,7 +88,8 @@ When /^(?:|I )fill in the following:$/ do |fields|
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
-  select(value, :from => field)
+  pending
+  #select(value, :from => field)
 end
 
 When /^(?:|I )check "([^"]*)"$/ do |field|
@@ -103,21 +109,23 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
-  if page.respond_to? :should
-    page.should have_content(text)
-  else
-    assert page.has_content?(text)
-  end
+  pending
+  #if page.respond_to? :should
+  #  page.should have_content(text)
+  #else
+  #  assert page.has_content?(text)
+  #end
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
-  regexp = Regexp.new(regexp)
+  pending
+  #regexp = Regexp.new(regexp)
 
-  if page.respond_to? :should
-    page.should have_xpath('//*', :text => regexp)
-  else
-    assert page.has_xpath?('//*', :text => regexp)
-  end
+  #if page.respond_to? :should
+  #  page.should have_xpath('//*', :text => regexp)
+  #else
+  #  assert page.has_xpath?('//*', :text => regexp)
+  #end
 end
 
 Then /^(?:|I )should not see "([^"]*)"$/ do |text|
@@ -228,12 +236,13 @@ Then /^the "([^"]*)" checkbox(?: within (.*))? should not be checked$/ do |label
 end
  
 Then /^(?:|I )should be on (.+)$/ do |page_name|
-  current_path = URI.parse(current_url).path
-  if current_path.respond_to? :should
-    current_path.should == path_to(page_name)
-  else
-    assert_equal path_to(page_name), current_path
-  end
+  pending
+  #urrent_path = URI.parse(current_url).path
+  #if current_path.respond_to? :should
+  #  current_path.should == path_to(page_name)
+  #else
+  #  assert_equal path_to(page_name), current_path
+  #end
 end
 
 Then /^(?:|I )should have the following query string:$/ do |expected_pairs|

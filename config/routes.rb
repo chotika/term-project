@@ -15,7 +15,19 @@ TermProject::Application.routes.draw do
   #   resources :products
 
   resources :abouts
-  root :to => redirect('/abouts')
+#  root :to => redirect('/abouts')
+ 
+
+
+  
+  resources :examinationrooms do
+    resources :abouts
+  end
+  
+  root :to => redirect('/examinationrooms')
+  
+ 
+  
   # Sample resource route with options:
   #   resources :products do
   #     member do

@@ -15,6 +15,11 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
+    when /^the Proctor Management Module home page/
+      '/examinationrooms'
+    when /^the Create Add a Proctor page/
+      '/examinationrooms/new'
+    
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
