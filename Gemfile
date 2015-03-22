@@ -23,12 +23,12 @@ group :assets do
   gem 'therubyracer'
   gem 'sass-rails'
   gem 'coffee-rails'
-  source 'https://rails-assets.org' do
+  gem 'uglifier'
+end
+source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-angular'
   gem 'rails-assets-leaflet'
-  end
-  gem 'uglifier'
 end
 
 gem 'jquery-rails'
