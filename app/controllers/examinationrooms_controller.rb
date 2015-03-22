@@ -12,8 +12,6 @@ class ExaminationroomsController < ApplicationController
     
     @proctors = Proctor.create!(params[:proctor])
     flash[:notice] = " was successfully created."
-    
-    
     redirect_to examinationrooms_path
     
     
