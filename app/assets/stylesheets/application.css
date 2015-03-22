@@ -128,7 +128,7 @@ background:#d9dcde;
 	background: -webkit-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
 	background: -o-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
 	background: -ms-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d9dcde',endColorstr='#d9dcde',GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9dcde',endColorstr='#d9dcde',GradientType=0);
 	padding:5px 4px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
