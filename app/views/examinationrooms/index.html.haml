@@ -1,0 +1,40 @@
+-#  This file is app/views/examinationrooms/index.html.haml
+%h1 Proctor Management Module
+%a.m5{:href => "/"} HOME
+%a.m5{:href => "/abouts"} ABOUT US
+
+.link
+  =link_to ' Add Proctor', new_examinationroom_path
+
+
+.containner
+  .containerLeft
+    %table#examinationrooms
+      %thead
+        %tr
+          %th Room_id
+          %th Room_name
+          %th Date_time
+          %th Number_of_proctor
+      %tbody
+        - @examinationrooms.each do |examinationroom|
+          %tr
+            %td= examinationroom.room_id
+            %td= examinationroom.room_name
+            %td= examinationroom.date_time
+            %td= examinationroom.number_of_proctor
+
+  .containerRight1  
+    %table#proctors
+      %thead
+        %tr
+          %th Firstname
+          %th Lastname
+          %th Position 
+        %tbody
+        - @proctors.each do |proctor|
+          %tr
+            %td= proctor.firstname
+            %td= proctor.lastname
+            %td= proctor.position
+

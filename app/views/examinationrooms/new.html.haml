@@ -1,0 +1,15 @@
+%h2 Add a Proctor
+ 
+= form_tag examinationrooms_path, :method => :post do
+ 
+  = label :proctor, :firstname, 'Firstname'
+  = text_field :proctor, :firstname
+  
+  = label :proctor, :lastname, 'Lastname'
+  = text_field :proctor, :lastname
+ 
+  = label :proctor, :position, 'Position'
+  = select :proctor, :position, ['Professor','Officer']
+ 
+ 
+  = submit_tag 'Add'
