@@ -16,4 +16,4 @@
 //= require angular
 //= require leaflet
 //= require_tree .
-//= require_tree shared
+

@@ -3,7 +3,6 @@
   *= require bootstrap
   *= require leaflet
   *= require_tree .
-  *= require_tree shared
   */
 html, body {
   margin: 0;
