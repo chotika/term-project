@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'bundler', '>= 1.8.4'
 ruby '1.9.3'
 gem 'rails', '3.2.18'
 
@@ -23,6 +23,11 @@ group :assets do
   gem 'therubyracer'
   gem 'sass-rails'
   gem 'coffee-rails'
+  source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-angular'
+  gem 'rails-assets-leaflet'
+  end
   gem 'uglifier'
 end
 
