@@ -37,7 +37,7 @@ Scenario: can't add a proctor
   And I select "Professor" from "Position"
   And I press "Add"
   Then I should be on the Proctor Management Module home page
-  And I should not see ""
+  And I should not see anything
     
     
 #Feature: Can add proctor to examinationroom by autometically
