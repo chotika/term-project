@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gem 'bundler', '>= 1.8.4'
 ruby '1.9.3'
 gem 'rails', '3.2.18'
-
+gem "auto_increment"
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'

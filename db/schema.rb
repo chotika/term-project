@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(:version => 20150320194625) do
   end
 
   create_table "proctors", :force => true do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "position"
+    t.integer "proctor_id"
+    t.string  "firstname"
+    t.string  "lastname"
+    t.string  "position"
+    t.integer "room_id"
   end
 
 end

@@ -53,11 +53,12 @@
       "/home/ubuntu/workspace/term-project/app/models/proctor.rb": [
         1,
         1,
+        1,
         null,
         null
       ]
     },
-    "timestamp": 1427446514
+    "timestamp": 1427701986
   },
   "RSpec": {
     "coverage": {
@@ -90,33 +91,76 @@
         null,
         null,
         1,
+        0,
+        null,
         null,
         null,
         1,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        1,
         0,
         0,
         0,
+        0,
         null,
         null,
-        null,
-        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
       "/home/ubuntu/workspace/term-project/app/models/examinationroom.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
         null,
         null
       ],
       "/home/ubuntu/workspace/term-project/app/models/proctor.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ]
     },
-    "timestamp": 1427447962
+    "timestamp": 1428248099
   }
 }

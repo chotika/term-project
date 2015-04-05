@@ -28,13 +28,19 @@
     %table#proctors
       %thead
         %tr
+          %th Proctor_id
           %th Firstname
           %th Lastname
           %th Position 
+          %th Room_id
+          %th More Info
         %tbody
-        - @proctors.each do |proctor|
+        - @proctor.each do |proctor|
           %tr
+            %td= proctor.proctor_id
             %td= proctor.firstname
             %td= proctor.lastname
             %td= proctor.position
+            %td= proctor.room_id
+            %td= link_to "Details", examinationroom_path(@proctor)
 
