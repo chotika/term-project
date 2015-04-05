@@ -12,7 +12,7 @@ class ExaminationroomsController < ApplicationController
   
   def create
  
-    @proctor = Proctor.create!(params[:proctor])
+   @proctor = Proctor.create!(params[:proctor])
    if @proctor.save
       flash.now[:notice] = "#{@proctor.firstname} was successfully created."
       redirect_to examinationrooms_path

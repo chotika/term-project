@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20150320194625) do
     t.string  "firstname"
     t.string  "lastname"
     t.string  "position"
-    t.integer "room_id"
+    t.integer "procroom_id"
   end
 
 end

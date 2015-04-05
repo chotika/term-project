@@ -1,5 +1,5 @@
 class Examinationroom < ActiveRecord::Base
-     has_one :proctor
+     #has_many :proctors
      attr_accessible :room_id,:room_name,:date_time,:number_of_proctor,:set_code,:primary_key
      #auto_increment
      self.primary_key = :room_id 

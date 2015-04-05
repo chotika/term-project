@@ -19,6 +19,10 @@ group :production do
   gem 'pg'
 end
 
+group :test do
+    gem 'mocha', '~>0.9.8', :require => false
+end
+
 group :assets do
   gem 'therubyracer'
   gem 'sass-rails'
