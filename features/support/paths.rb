@@ -11,8 +11,12 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def path_to(page_name)
-    case page_name
+    
 
+    def proctorId(t) 
+      Proctor.find(t)
+    end
+    case page_name
     when /^the home\s?page$/
       '/'
     when /^the Proctor Management Module home page/
@@ -20,8 +24,8 @@ module NavigationHelpers
     when /^the Create Add a Proctor page/
       '/examinationrooms/new'
     when /^the Edit Existing Proctor page/
-      id = movieId($1)
-      '/examinationrooms/#{id}'
+      id = proctorId($1)
+      '/examinationrooms/'#{id}
     
 
     # Add more mappings here.
