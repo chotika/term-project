@@ -17,6 +17,16 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+if Rails.env.production?
+  # silence the deprecation warnings on Heroku
+  # Thanks to: https://gist.github.com/2237443
+  ActiveSupport::Deprecation.behavior = lambda do |msg, stack|
+    unless /vendor\/plugins/ =~ msg
+      ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(msg,stack) # whichever handlers you want - this is the default
+    end
+  end
+end
+
 module TermProject
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
