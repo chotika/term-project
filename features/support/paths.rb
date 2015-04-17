@@ -19,6 +19,9 @@ module NavigationHelpers
       '/examinationrooms'
     when /^the Create Add a Proctor page/
       '/examinationrooms/new'
+    when /^the Edit Existing Proctor page/
+      id = movieId($1)
+      '/examinationrooms/#{id}'
     
 
     # Add more mappings here.

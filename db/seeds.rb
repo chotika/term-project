@@ -8,11 +8,11 @@
 # Seed the RottenPotatoes DB with some movies.
 
 
-more_examinationrooms= [{:room_id => :set_code , :room_name => 'one', :date_time => '25-Nov-1992'},
-                         {:room_id => :set_code , :room_name => 'two', :date_time => '26-Nov-1992'},
-                         {:room_id => :set_code  , :room_name => 'three', :date_time => '27-Nov-1992'},
-                         {:room_id => :set_code  , :room_name => 'four', :date_time => '25-Nov-1992'},
-                         {:room_id => :set_code , :room_name => 'five', :date_time => '25-Nov-1992'}]
+more_examinationrooms= [{:primary_key => :set_code , :room_name => 'one', :date_time => '25-Nov-1992'},
+                         {:primary_key => :set_code , :room_name => 'two', :date_time => '26-Nov-1992'},
+                         {:primary_key => :set_code  , :room_name => 'three', :date_time => '27-Nov-1992'},
+                         {:primary_key => :set_code  , :room_name => 'four', :date_time => '25-Nov-1992'},
+                         {:primary_key => :set_code , :room_name => 'five', :date_time => '25-Nov-1992'}]
  
 more_examinationrooms.each do |examinationroom|
   Examinationroom.create!(examinationroom)

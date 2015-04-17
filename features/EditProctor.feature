@@ -19,7 +19,7 @@ Background: proctor have been added to database
 Scenario: User can edit proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
-    Then I should be on Edit Existing Proctor page
+    Then I should be on the Edit Existing Proctor page
     When I fill in "Firstname" from "Mook" to "Mookravee"
     And I press "Update Proctor Info"
     Then I should be on the Proctor Management Module home page
