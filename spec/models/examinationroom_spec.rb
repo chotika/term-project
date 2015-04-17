@@ -7,12 +7,12 @@ describe Examinationroom do
         Examinationroom.find('One')
     end
     it 'should raise an InvalidKeyError with no API key' do 
-        Examinationroom.stub(:room_name).and_return('INVALID')
+        Examinationroom.stub(:api_key).and_return('INVALID')
         lambda { Examinationroom.find('One') }.
             should raise_error(Examinationroom::InvalidKeyError)
     end
      it 'should raise an InvalidKeyError with no API key' do 
-        Examinationroom.stub(:room_name).and_return('')
+        Examinationroom.stub(:api_key).and_return('')
         lambda { Examinationroom.find('One') }.
             should raise_error(Examinationroom::InvalidKeyError)
     end

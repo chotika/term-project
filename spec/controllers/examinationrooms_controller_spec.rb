@@ -13,6 +13,7 @@ RSpec.describe ExaminationroomsController, :type => :controller do
           post :create, {:proctor => proctor}
           response.should redirect_to(examinationroom_path)
         end
-     
+
     end
+    
 end

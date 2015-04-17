@@ -29,7 +29,7 @@ class ExaminationroomsController < ApplicationController
   def edit
     @proctor = Proctor.find params[:id]
   end
-  
+   
   def update
     @proctor = Proctor.find params[:id]
     @proctor.update_attributes!(params[:proctor])
