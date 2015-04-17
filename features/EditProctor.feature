@@ -15,7 +15,7 @@ Background: proctor have been added to database
    
   And I am on the Proctor Management Module home page  
 
-#happy path  
+#Happy Path  
 Scenario: User can edit proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details" on "Mook"
@@ -25,7 +25,7 @@ Scenario: User can edit proctor in database
     Then I should be on the Proctor Management Module home page
     And I should see "Mookravee"
     
-#Sad path
+#Sad Path
 Scenario: User can not edit proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details" on "Mook"

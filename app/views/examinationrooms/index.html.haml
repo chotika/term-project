@@ -15,14 +15,14 @@
           %th Room_id
           %th Room_name
           %th Date_time
-          %th Number_of_proctor
+          -#%th Number_of_proctor
       %tbody
         - @examinationrooms.each do |examinationroom|
           %tr
             %td= examinationroom.room_id
             %td= examinationroom.room_name
             %td= examinationroom.date_time
-            %td= examinationroom.number_of_proctor
+            -#%td= examinationroom.number_of_proctor
 
   .containerRight1  
     %table#proctors

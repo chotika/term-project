@@ -2,7 +2,7 @@
 
 %h1 Edit Existing Proctor
 
-= form_tag edit_examinationroom_path(@proctor), :method => :put do
+= form_tag examinationroom_path(@proctor), :method => :put do
 
   = label :proctor, :firstname, 'Firstname'
   = text_field :proctor, 'firstname'
