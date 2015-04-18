@@ -25,7 +25,7 @@ module NavigationHelpers
       '/examinationrooms/new'
     when /^the Edit Existing Proctor page/
       id = proctorId($1)
-      '/examinationrooms/'#{id}
+      "/examinationrooms/#{id}"
     
 
     # Add more mappings here.
