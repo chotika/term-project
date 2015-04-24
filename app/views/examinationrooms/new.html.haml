@@ -1,14 +1,16 @@
-%h2 Add a Proctor
-      
 = form_tag examinationrooms_path do
   
+  = flash[:notice]
   = label :proctor, :firstname, 'Firstname'
-  = text_field :proctor, :firstname
+  = text_field :proctor, :firstname ,placeholder: " Firstname "
   
   = label :proctor, :lastname, 'Lastname'
-  = text_field :proctor, :lastname
+  = text_field :proctor, :lastname ,placeholder: " Lastname "
  
   = label :proctor, :position, 'Position'
   = select :proctor, :position, ['Professor','Officer']
   
   = submit_tag 'Add'
+  
+%a.m5{:href => "/"} Back to home
+

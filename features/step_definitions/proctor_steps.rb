@@ -14,6 +14,6 @@ Given /the following proctor exist/ do |proctors_table|
 end
 
 
-When(/^I fill in "(.*?)" from "(.*?)" to "(.*?)"$/) do |arg1, arg2, arg3|
-  fill_in(arg1, :from => arg2, :to => arg3)
+When(/^I fill in "(.*?)" from "(.*?)" to "(.*?)"$/) do |field, old, new|
+  fill_in(field, :with => new)
 end

@@ -3,6 +3,8 @@
 %a.m5{:href => "/"} HOME
 %a.m5{:href => "/abouts"} ABOUT US
 
+ 
+
 .link
   =link_to ' Add Proctor', new_examinationroom_path
 
@@ -13,11 +15,10 @@
   .containerLeft
    
       
-    = form_tag("/search", method: "get",from: "search-form") do 
+    = form_tag(examinationrooms_search_path(@search_from), action: "search",id: ":Room_id",name: "Room_id" , method: "get",from: "search_by") do 
       = label_tag(:q, "Search by room :") 
-      = text_field_tag :search_from, params[:search_from], placeholder: "Search room", :class => 'input' 
-      = submit_tag "Search", :class => 'submit' 
-      = link_to_function "Clear", "$('search_field').clear()" 
+      = text_field_tag :search_from, params[:search_by], placeholder: "Search Room", :class => 'input' 
+      = submit_tag 'Search' 
 
     %table#examinationrooms
       %thead
@@ -36,12 +37,15 @@
 
   .containerRight1  
   
-    = form_tag("/search", method: "get") do 
+    = form_tag(examinationrooms_search_path(@firstname), action: "Proctor",id: "search_name",name: "search_by" , method: "get",from: "search_by") do 
       = label_tag(:q, "Search by name :") 
-      = text_field_tag(:q) 
-      = submit_tag("Search")
-     
-      = link_to_function "Clear", "$('search_field').clear()" 
+      = text_field_tag :search_from, params[:search_by], placeholder: "Search Name", :class => 'input' 
+      = submit_tag "Search"
+  
+    
+    
+
+
 
     %table#proctors
       %thead

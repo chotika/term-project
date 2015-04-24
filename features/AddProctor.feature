@@ -16,6 +16,7 @@ Background: proctor have been added to database
   
 #Happy Path
 Scenario: can add a proctor
+  
   Given I am on the Proctor Management Module home page
   When I follow "Add Proctor"
   Then I should be on the Create Add a Proctor page
@@ -28,6 +29,7 @@ Scenario: can add a proctor
   
 #Sad Path
 Scenario: can't add a proctor
+  
   Given I am on the Proctor Management Module home page
   When I follow "Add Proctor"
   Then I should be on the Create Add a Proctor page
@@ -37,5 +39,3 @@ Scenario: can't add a proctor
   And I press "Add"
   Then I should be on the Proctor Management Module home page
   And I should not see "Mook"
-    
-    

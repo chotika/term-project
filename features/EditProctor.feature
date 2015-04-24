@@ -1,7 +1,7 @@
 Feature: User can manually edit proctor
   As a user
   So that I can manage proctor's profile
-  I want to edit or delete proctor's informations in database
+  I want to edit proctor's informations in database
 
 Background: proctor have been added to database
 
@@ -28,7 +28,7 @@ Scenario: User can edit proctor in database
 #Sad Path
 Scenario: User can not edit proctor in database
     Given I am on the Proctor Management Module home page
-    When I follow "Details" on "Mook"
+    When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
     When I fill in "Firstname" from "Mook" to ""
     And I press "Update Proctor Info"

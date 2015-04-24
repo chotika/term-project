@@ -107,6 +107,7 @@ table#proctors th{
   border-top:2px solid #fff;
   border-bottom:1px solid #fff;
   color:#000;padding:8px;
+  text-align: center;
 }
 table#proctors td{
   background:#FEE4BF;
@@ -114,6 +115,7 @@ table#proctors td{
   color:#666;
   border-top:1px dashed #fff;
   padding:8px;
+  text-align: center;
   
 }
 table#proctors tr:hover td{

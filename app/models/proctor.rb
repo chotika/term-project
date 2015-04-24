@@ -13,11 +13,9 @@ class Proctor < ActiveRecord::Base
           search_condition = "%" + search + "%"
           find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
      end
+  
      
-    # validates :firstname, :presence => true #{ :message => "Registration name can't be blank" }
-    # validates :lastname, :presence => true #{ :message => "Registration name can't be blank" }
-    # validates :position, :presence => true  #{ :message => "Registration name can't be blank" }
-     
-     #proctor = Proctor.new(firstname: 'dewdew')
-    # proctor.errors.full_messages
+     validates :firstname, :presence => true #{ :message => "Registration name can't be blank" }
+     validates :lastname, :presence => true #{ :message => "Registration name can't be blank" }
+     validates :position, :presence => true # { :message => "Registration name can't be blank" }
 end    

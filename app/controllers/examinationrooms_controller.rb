@@ -5,31 +5,36 @@ class ExaminationroomsController < ApplicationController
     @proctor = Proctor.all
     
     if params[:search_room] 
-        @examinationrooms = search
+        @examinationrooms = Examinationroom.search
+        
     else
         @examinationrooms = Examinationroom.all
     end
-    
+
   end
   def new
     @proctor = Proctor.new
-    
   end
-  
-  def create
+    
+  def errors
+    @errors = ActiveModel::Errors.new(self)
+  end
+ def create
  
-   @proctor = Proctor.create!(params[:proctor])
+   @proctor = Proctor.new(params[:proctor])
    if @proctor.save
-      flash.now[:notice] = "#{@proctor.firstname} was successfully created."
-      redirect_to examinationrooms_path
-   else
-      render 'new' #note , 'new' template can access @proctor's field values!
+     flash[:notice] = "#{@proctor.firstname} was successfully created."
+      redirect_to new_examinationroom_path
+  else
+    #  render :action => :new #note , 'new' template can access @proctor's field values!
+      redirect_to new_examinationroom_path , notice: @proctor.errors.full_messages 
    end
   end
-  
+
   def show
     id = params[:id] # retrieve movie ID from URI route
     @proctor = Proctor.find params[:id] # look up movie by unique ID
+  
   end
   
   def edit
@@ -56,8 +61,15 @@ class ExaminationroomsController < ApplicationController
   
 
   def search
-    @examinationrooms = Examinationroom.search(params[:search_room])
+    id = params[:id]
+    if(params[:search_by] == "#{@examinationroom.room_id}")
+      @examinationrooms = Examinationroom.where("#{@examinationroom.room_id} = '#{params[:search_by]}'")
+       redirect_to searchroom_path
+    end
+    if(params[:search_by] == "#{@proctor.firstname}")
+      @proctor = Proctor.where("#{@proctor.firstname} = '#{params[:search_by]}'")
+    end
+    
   end
 
 end
-

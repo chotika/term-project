@@ -9,12 +9,9 @@ class Examinationroom < ActiveRecord::Base
           self.room_id = max_code.to_i + 1 
      end
      
-     def self.search(search_room)
-          self.where("from_place LIKE ? and to_place LIKE ?", "%#{search_room}%")
-     end
-     
      def self.search(search)
-          search_condition = "%" + search + "%"
-          find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+          
+          where("name LIKE ?", "%#{search}%") 
+          where("content LIKE ?", "%#{search}%")
      end
 end   
