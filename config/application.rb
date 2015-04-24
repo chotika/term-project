@@ -17,6 +17,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
 if Rails.env.production?
   # silence the deprecation warnings on Heroku
   # Thanks to: https://gist.github.com/2237443
@@ -77,4 +78,5 @@ module TermProject
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
+  
 end

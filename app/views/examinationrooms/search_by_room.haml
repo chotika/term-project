@@ -1,0 +1,32 @@
+-#  This file is app/views/examinationrooms/search_by_room.html.haml
+%h1 Search by Room
+
+
+.link
+  =link_to ' Add Proctor', new_examinationroom_path
+
+   
+
+
+.containner
+  .containerLeft
+    = form_tag("/search", method: "get") do 
+      = label_tag(:q, "Search by room :") 
+      = text_field_tag(:q) 
+      = submit_tag("Search") 
+      = link_to_function "Clear", "$('search_field').clear()" 
+
+    %table#examinationrooms
+      %thead
+        %tr
+          %th Room_id
+          %th Room_name
+          %th Date_time
+          
+      %tbody
+        - @examinationrooms.each do |examinationroom|
+          %tr
+            %td= examinationroom.room_id
+            %td= examinationroom.room_name
+            %td= examinationroom.date_time
+           

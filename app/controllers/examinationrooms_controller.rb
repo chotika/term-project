@@ -4,6 +4,12 @@ class ExaminationroomsController < ApplicationController
     @examinationrooms = Examinationroom.all
     @proctor = Proctor.all
     
+    if params[:search_room] 
+        @examinationrooms = search
+    else
+        @examinationrooms = Examinationroom.all
+    end
+    
   end
   def new
     @proctor = Proctor.new
@@ -41,6 +47,17 @@ class ExaminationroomsController < ApplicationController
     @proctor = Proctor.find(params[:id])
     @proctor.destroy
     flash[:notice] = "Proctor '#{@proctor.firstname}' deleted."
-    redirect_to examinationrooms_path(@proctor)
+    redirect_to examinationrooms_path
   end
+  
+  def is_numeric?(obj) 
+     obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+  end
+  
+
+  def search
+    @examinationrooms = Examinationroom.search(params[:search_room])
+  end
+
 end
+

@@ -24,9 +24,9 @@ module NavigationHelpers
     when /^the Create Add a Proctor page/
       '/examinationrooms/new'
     when /^the Edit Existing Proctor page/
-      id = proctorId($1)
-      "/examinationrooms/#{id}"
-    
+      #id = proctorId($1)
+      "/examinationrooms/1"
+      
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -1,19 +1,12 @@
+require 'spec_helper'
 require 'rails_helper'
+RSpec.describe Examinationroom, :type => :model do
+    
+    describe 'searching by room' do
+        it 'should call Examinationroom with room name' do
+        Examinationroom.should_receive(:search).with('one')
+        Examinationroom.search('one')
+        end
+    end
 
-describe Examinationroom do
-  it 'should call Examinationroom with room_name keywords' do 
-        Examinationroom.should_receive(:find).
-            with(hash_including :room_name => 'One')
-        Examinationroom.find('One')
-    end
-    it 'should raise an InvalidKeyError with no API key' do 
-        Examinationroom.stub(:api_key).and_return('INVALID')
-        lambda { Examinationroom.find('One') }.
-            should raise_error(Examinationroom::InvalidKeyError)
-    end
-     it 'should raise an InvalidKeyError with no API key' do 
-        Examinationroom.stub(:api_key).and_return('')
-        lambda { Examinationroom.find('One') }.
-            should raise_error(Examinationroom::InvalidKeyError)
-    end
 end

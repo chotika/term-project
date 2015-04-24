@@ -17,7 +17,7 @@ TermProject::Application.routes.draw do
   resources :abouts
 #  root :to => redirect('/abouts')
  
-
+  
 
   
   resources :examinationrooms do

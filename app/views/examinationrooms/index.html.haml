@@ -6,9 +6,19 @@
 .link
   =link_to ' Add Proctor', new_examinationroom_path
 
+   
+
 
 .containner
   .containerLeft
+   
+      
+    = form_tag("/search", method: "get",from: "search-form") do 
+      = label_tag(:q, "Search by room :") 
+      = text_field_tag :search_from, params[:search_from], placeholder: "Search room", :class => 'input' 
+      = submit_tag "Search", :class => 'submit' 
+      = link_to_function "Clear", "$('search_field').clear()" 
+
     %table#examinationrooms
       %thead
         %tr
@@ -25,6 +35,14 @@
            
 
   .containerRight1  
+  
+    = form_tag("/search", method: "get") do 
+      = label_tag(:q, "Search by name :") 
+      = text_field_tag(:q) 
+      = submit_tag("Search")
+     
+      = link_to_function "Clear", "$('search_field').clear()" 
+
     %table#proctors
       %thead
         %tr
