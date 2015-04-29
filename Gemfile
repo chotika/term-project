@@ -24,6 +24,12 @@ group :test do
     gem 'mocha', '~>0.9.8', :require => false
 end
 
+gem 'sunspot_rails'
+ 
+group :development do
+    gem 'sunspot_solr'
+end
+
 group :assets do
   gem 'therubyracer'
   gem 'sass-rails'

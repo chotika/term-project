@@ -24,7 +24,7 @@ Scenario: can add a proctor
   And I fill in "Lastname" with "Chew"
   And I select "Professor" from "Position"
   And I press "Add"
-  Then I should be on the Proctor Management Module home page
+  Then I should be on the Create Add a Proctor page
   And I should see "Mook"
   
 #Sad Path
@@ -37,5 +37,6 @@ Scenario: can't add a proctor
   And I fill in "Lastname" with "Chew"
   And I select "Professor" from "Position"
   And I press "Add"
-  Then I should be on the Proctor Management Module home page
+  Then I should be on the Create Add a Proctor page
   And I should not see "Mook"
+  

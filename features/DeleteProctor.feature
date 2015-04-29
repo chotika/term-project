@@ -1,7 +1,8 @@
-Feature: User can manually edit proctor
+Feature: User can manually delete proctor
   As a user
-  So that I can manage proctor's profile
-  I want to edit proctor's informations in database
+  So that I can delete proctor's informations
+  I want to delete proctor's informations in database
+  
 
 Background: proctor have been added to database
 
@@ -13,30 +14,22 @@ Background: proctor have been added to database
   | 4            | Ice       | Papit        |  Professor  | 4           |
   | 5            | Prim      | Plp          |  Officer    | 5           |
    
-  And I am on the Proctor Management Module home page 
-
+  And I am on the Proctor Management Module home page  
+  
 #Happy Path
-Scenario: User can edit proctor in database
+Scenario: User can delete proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
-    When I fill in "Firstname" with "Mookravee"
-    And I fill in "Lastname" with "Chew"
-    And I select "Officer" from "Position"
-    And I press "Update Proctor Info"
+    When I press "Delete"
     Then I should be on the Proctor Management Module home page
-    And I should see "Mookravee"
-
+    And I should not see "Mook" 
+    
 #Sad Path
-Scenario: User can not edit proctor in database
+Scenario: User cannot delete proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
-    When I fill in "Firstname" with ""
-    And I fill in "Lastname" with ""
-    When I select "Professor" from "Position"
-    And I press "Update Proctor Info"
+    When I press "Delete"
     Then I should be on the Proctor Management Module home page
     And I should see "Mook"
-    
-  

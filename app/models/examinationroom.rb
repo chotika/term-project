@@ -8,10 +8,9 @@ class Examinationroom < ActiveRecord::Base
           max_code = Examinationroom.maximum(:room_id)
           self.room_id = max_code.to_i + 1 
      end
-     
      def self.search(search)
-          
-          where("name LIKE ?", "%#{search}%") 
-          where("content LIKE ?", "%#{search}%")
+       search_condition = "%" + search + "%"
+       where(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
      end
+
 end   

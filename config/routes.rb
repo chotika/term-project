@@ -25,11 +25,12 @@ TermProject::Application.routes.draw do
   
   resources :examinationrooms do
     resources :abouts
+  
   end
   
   root :to => redirect('/examinationrooms')
   
-  #get '/examinationrooms/search'
+  get '/examinationrooms/search'
   get '/examinationrooms/searchroom'
   
   # Sample resource route with options:

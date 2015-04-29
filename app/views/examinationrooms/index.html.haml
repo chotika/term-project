@@ -1,11 +1,16 @@
 -#  This file is app/views/examinationrooms/index.html.haml
 %h1 Proctor Management Module
+
+=flash[:title] 
+<br>
+= flash[:notice]
+<br>
 %a.m5{:href => "/"} HOME
 %a.m5{:href => "/abouts"} ABOUT US
 
- 
 
 .link
+  
   =link_to ' Add Proctor', new_examinationroom_path
 
    
@@ -13,12 +18,15 @@
 
 .containner
   .containerLeft
+  
    
+
       
-    = form_tag(examinationrooms_search_path(@search_from), action: "search",id: ":Room_id",name: "Room_id" , method: "get",from: "search_by") do 
+    = form_tag examinationrooms_path,:controller => 'examinationrooms', :action => 'search', :method => 'get' ,id: "search" do 
       = label_tag(:q, "Search by room :") 
-      = text_field_tag :search_from, params[:search_by], placeholder: "Search Room", :class => 'input' 
+      = text_field_tag :search , params[:search] , placeholder: "Search Room", :class => 'input' 
       = submit_tag 'Search' 
+      
 
     %table#examinationrooms
       %thead
@@ -37,7 +45,7 @@
 
   .containerRight1  
   
-    = form_tag(examinationrooms_search_path(@firstname), action: "Proctor",id: "search_name",name: "search_by" , method: "get",from: "search_by") do 
+    = form_tag(examinationrooms_path(@firstname), action: "Proctor",id: "search",name: "search_by" , method: "get",from: "search_by") do 
       = label_tag(:q, "Search by name :") 
       = text_field_tag :search_from, params[:search_by], placeholder: "Search Name", :class => 'input' 
       = submit_tag "Search"

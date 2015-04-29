@@ -4,11 +4,16 @@ class ExaminationroomsController < ApplicationController
     @examinationrooms = Examinationroom.all
     @proctor = Proctor.all
     
-    if params[:search_room] 
-        @examinationrooms = Examinationroom.search
+    if params[:search] 
+      
+        @examinationrooms = Examinationroom.search(params[:search])
+   
+        #redirect_to searchroom_path
+        #@examinationrooms = where("room = '#{params[:search]}'")
         
     else
         @examinationrooms = Examinationroom.all
+        
     end
 
   end
@@ -29,7 +34,7 @@ class ExaminationroomsController < ApplicationController
     #  render :action => :new #note , 'new' template can access @proctor's field values!
       redirect_to new_examinationroom_path , notice: @proctor.errors.full_messages 
    end
-  end
+ end
 
   def show
     id = params[:id] # retrieve movie ID from URI route
@@ -43,9 +48,14 @@ class ExaminationroomsController < ApplicationController
    
   def update
     @proctor = Proctor.find params[:id]
-    @proctor.update_attributes!(params[:proctor])
-    flash[:notice] = "#{@proctor.firstname} was successfully updated."
-    redirect_to examinationrooms_path(@proctor)
+    if @proctor.update_attributes(params[:proctor])
+      flash[:notice] = "#{@proctor.firstname} was successfully updated."
+      redirect_to examinationrooms_path(@proctor)
+    else
+      flash[:title] = "Update proctor_id : #{@proctor.proctor_id} name : #{@proctor.firstname} was failed"
+      flash[:notice] = @proctor.errors.full_messages 
+      redirect_to examinationrooms_path(@proctor)
+    end
   end
 
   def destroy
@@ -59,17 +69,9 @@ class ExaminationroomsController < ApplicationController
      obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
   end
   
-
   def search
-    id = params[:id]
-    if(params[:search_by] == "#{@examinationroom.room_id}")
-      @examinationrooms = Examinationroom.where("#{@examinationroom.room_id} = '#{params[:search_by]}'")
-       redirect_to searchroom_path
-    end
-    if(params[:search_by] == "#{@proctor.firstname}")
-      @proctor = Proctor.where("#{@proctor.firstname} = '#{params[:search_by]}'")
-    end
+    @examinationrooms = Examinationroom.search params[:search]
     
   end
-
+  
 end

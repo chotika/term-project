@@ -1,0 +1,9 @@
+<html>
+  <body>
+  <ul>
+    <% @grants.each do |examinationroom| %>
+  <li><%= link_to examinationroom.title,:action => 'show', :id => examinationroom.id  %></li>
+  <% end %>
+  </ul>
+  </body>
+</html>
