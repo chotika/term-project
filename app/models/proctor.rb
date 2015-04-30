@@ -1,5 +1,5 @@
 class Proctor < ActiveRecord::Base
-     attr_accessible :firstname, :lastname, :position ,:proctor_id,:set_procid ,:procroom_id,:search
+     attr_accessible :firstname, :lastname, :position ,:proctor_id,:set_procid ,:procroom_id,:searchname
      #belongs_to :examinationroom
      before_create :set_procid
      #self.primary_key = :proctor_id
@@ -9,7 +9,7 @@ class Proctor < ActiveRecord::Base
           self.procroom_id = ((max_code.to_i ) % 5)+1
      end
      
-     def self.search(search)
+     def self.searchname(search)
           key = "%#{search}%"
        if search
           where('firstname LIKE ? or lastname LIKE ?' , key, key)

@@ -11,10 +11,10 @@ class ExaminationroomsController < ApplicationController
         
     else 
         @examinationrooms = Examinationroom.all
-        
-    if params[:search] != nil
+    end    
+    if params[:searchname] != nil
 
-         @proctor = Proctor.search(params[:search])
+        @proctor = Proctor.searchname(params[:searchname])
     else    
         @proctor = Proctor.all
     end
