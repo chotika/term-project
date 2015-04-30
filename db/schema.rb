@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(:version => 20150320194625) do
 
   create_table "examinationrooms", :force => true do |t|
     t.integer  "room_id",           :null => false
-    t.integer  "primary_key",       :null => true
     t.string   "room_name"
     t.datetime "date_time"
     t.integer  "number_of_proctor"
@@ -24,8 +23,7 @@ ActiveRecord::Schema.define(:version => 20150320194625) do
   end
 
   create_table "proctors", :force => true do |t|
-    t.integer  "proctor_id",  :null => true
-    t.integer  "primary_key", :null => true
+    t.integer  "proctor_id"
     t.string   "firstname"
     t.string   "lastname"
     t.string   "position"

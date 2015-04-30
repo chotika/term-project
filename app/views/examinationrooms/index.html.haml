@@ -1,3 +1,4 @@
+<html>
 -#  This file is app/views/examinationrooms/index.html.haml
 %h1 Proctor Management Module
 
@@ -11,7 +12,7 @@
 
 .link
   
-  =link_to ' Add Proctor', new_examinationroom_path
+  =link_to 'Add Proctor', new_examinationroom_path
 
    
 
@@ -19,14 +20,11 @@
 .containner
   .containerLeft
   
-   
-
+    = form_tag examinationrooms_path, method: 'get' do
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", :name => nil
       
-    = form_tag examinationrooms_path,:controller => 'examinationrooms', :action => 'search', :method => 'get' ,id: "search" do 
-      = label_tag(:q, "Search by room :") 
-      = text_field_tag :search , params[:search] , placeholder: "Search Room", :class => 'input' 
-      = submit_tag 'Search' 
-      
+    
 
     %table#examinationrooms
       %thead
@@ -45,15 +43,12 @@
 
   .containerRight1  
   
-    = form_tag(examinationrooms_path(@firstname), action: "Proctor",id: "search",name: "search_by" , method: "get",from: "search_by") do 
-      = label_tag(:q, "Search by name :") 
-      = text_field_tag :search_from, params[:search_by], placeholder: "Search Name", :class => 'input' 
-      = submit_tag "Search"
   
-    
-    
-
-
+    = form_tag examinationrooms_path(@firstname), method: 'get' do
+      = text_field_tag :search, params[:search]
+      = submit_tag "Search", :name => nil
+     
+  
 
     %table#proctors
       %thead

@@ -20,8 +20,8 @@ Scenario: User can edit proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
-    When I fill in "Firstname" with "Mookravee"
-    And I fill in "Lastname" with "Chew"
+    When I fill in "firstname" with "Mook"
+    And I fill in "Lastname" with "Chewtrakul"
     And I select "Officer" from "Position"
     And I press "Update Proctor Info"
     Then I should be on the Proctor Management Module home page
@@ -32,7 +32,7 @@ Scenario: User can not edit proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
-    When I fill in "Firstname" with ""
+    When I fill in "firstname" with ""
     And I fill in "Lastname" with ""
     When I select "Professor" from "Position"
     And I press "Update Proctor Info"

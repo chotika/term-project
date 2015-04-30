@@ -24,6 +24,7 @@
       ],
       "/home/ubuntu/workspace/term-project/app/controllers/examinationrooms_controller.rb": [
         1,
+        null,
         1,
         null,
         22,
@@ -106,7 +107,7 @@
         null,
         1,
         null,
-        1,
+        null,
         1,
         1,
         10,
@@ -115,6 +116,13 @@
         1,
         0,
         0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null
@@ -147,7 +155,7 @@
         null
       ]
     },
-    "timestamp": 1430318231
+    "timestamp": 1430414774
   },
   "RSpec": {
     "coverage": {
@@ -256,7 +264,7 @@
         null,
         1,
         null,
-        1,
+        null,
         1,
         1,
         0,
@@ -297,6 +305,6 @@
         null
       ]
     },
-    "timestamp": 1430282062
+    "timestamp": 1430325364
   }
 }

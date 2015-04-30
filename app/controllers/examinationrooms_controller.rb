@@ -1,8 +1,9 @@
 class ExaminationroomsController < ApplicationController
+  
   def index
-    
-    @examinationrooms = Examinationroom.all
-    @proctor = Proctor.all
+    #@proctor = Proctor.all
+    #@examinationrooms = Examinationroom.search(params[:search])
+    #@examinationrooms = Examinationroom.all
     
     if params[:search] 
       
@@ -12,10 +13,20 @@ class ExaminationroomsController < ApplicationController
         #@examinationrooms = where("room = '#{params[:search]}'")
         
     else
-        @examinationrooms = Examinationroom.all
+       @examinationrooms = Examinationroom.all
         
     end
-
+    if params[:search] 
+      
+       @proctor = Proctor.search(params[:search])
+   
+        #redirect_to searchroom_path
+        #@examinationrooms = where("room = '#{params[:search]}'")
+        
+    else
+       @proctor = Proctor.all
+        
+    end
   end
   def new
     @proctor = Proctor.new
@@ -69,9 +80,9 @@ class ExaminationroomsController < ApplicationController
      obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
   end
   
-  def search
-    @examinationrooms = Examinationroom.search params[:search]
-    
-  end
+  #def search
+  #  @examinationrooms = Examinationroom.search params[:search]
+  #  
+  #end
   
 end

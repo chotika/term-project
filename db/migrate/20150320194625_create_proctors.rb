@@ -1,7 +1,7 @@
 class CreateProctors < ActiveRecord::Migration
   def change
-    create_table :proctors do |t|
-      t.integer :proctor_id, :primary_key,:auto_increment => 1, :null => false
+    create_table :proctors , :id => false do |t|
+      t.integer :proctor_id,  :null => false
       t.string :firstname
       t.string :lastname
       t.string :position

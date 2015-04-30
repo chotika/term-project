@@ -29,3 +29,4 @@ Scenario: User cannot see proctor's informations
     When I follow "Details about Mook"
     Then I should be on the Edit Existing Proctor page
     And I should not see "Mook"
+    

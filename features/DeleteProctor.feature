@@ -33,3 +33,4 @@ Scenario: User cannot delete proctor in database
     When I press "Delete"
     Then I should be on the Proctor Management Module home page
     And I should see "Mook"
+    
