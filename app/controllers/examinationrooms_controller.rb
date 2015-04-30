@@ -5,28 +5,20 @@ class ExaminationroomsController < ApplicationController
     #@examinationrooms = Examinationroom.search(params[:search])
     #@examinationrooms = Examinationroom.all
     
-    if params[:search] 
+    if params[:search] != nil 
       
         @examinationrooms = Examinationroom.search(params[:search])
-   
-        #redirect_to searchroom_path
-        #@examinationrooms = where("room = '#{params[:search]}'")
         
-    else
-       @examinationrooms = Examinationroom.all
+    else 
+        @examinationrooms = Examinationroom.all
         
+    if params[:search] != nil
+
+         @proctor = Proctor.search(params[:search])
+    else    
+        @proctor = Proctor.all
     end
-    if params[:search] 
-      
-       @proctor = Proctor.search(params[:search])
-   
-        #redirect_to searchroom_path
-        #@examinationrooms = where("room = '#{params[:search]}'")
-        
-    else
-       @proctor = Proctor.all
-        
-    end
+
   end
   def new
     @proctor = Proctor.new

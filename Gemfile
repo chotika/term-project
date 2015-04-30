@@ -3,7 +3,7 @@ gem 'bundler', '>= 1.8.4'
 ruby '1.9.3'
 gem 'rails', '3.2.18'
 gem "auto_increment"
-gem 'sqlite3'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
@@ -23,12 +23,6 @@ end
 
 group :test do
     gem 'mocha', '~>0.9.8', :require => false
-end
-
-gem 'sunspot_rails'
- 
-group :development do
-    gem 'sunspot_solr'
 end
 
 group :assets do

@@ -12,7 +12,7 @@ class Proctor < ActiveRecord::Base
      def self.search(search)
           key = "%#{search}%"
        if search
-          where('firstname LIKE ?', key, key)
+          where('firstname LIKE ? or lastname LIKE ?' , key, key)
        else
           all
        end
