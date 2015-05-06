@@ -5,7 +5,7 @@ class CreateProctors < ActiveRecord::Migration
       t.string :firstname
       t.string :lastname
       t.string :position
-      t.integer :procroom_id
+      t.integer :room_name
       
      # t.belongs_to :examinationroom , index: true 
 

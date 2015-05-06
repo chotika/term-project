@@ -6,15 +6,20 @@ class ExaminationroomsController < ApplicationController
     #@examinationrooms = Examinationroom.all
     
     if params[:search] != nil 
-      
-        @examinationrooms = Examinationroom.search(params[:search])
-        
+       
+        if params[:search] == 'one'
+          @examinationrooms = Examinationroom.search(params[:search])
+          @proctor = Proctor.searchname('1')
+        end
     else 
         @examinationrooms = Examinationroom.all
     end    
+    
     if params[:searchname] != nil
 
         @proctor = Proctor.searchname(params[:searchname])
+        
+        
     else    
         @proctor = Proctor.all
     end
@@ -72,9 +77,6 @@ class ExaminationroomsController < ApplicationController
      obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
   end
   
-  #def search
-  #  @examinationrooms = Examinationroom.search params[:search]
-  #  
-  #end
+  
   
 end

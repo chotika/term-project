@@ -12,6 +12,7 @@ class Examinationroom < ActiveRecord::Base
           key = "%#{search}%"
        if search
           where('room_name LIKE ?', key)
+          
        else
           all
        end

@@ -23,7 +23,11 @@ RSpec.describe ExaminationroomsController, :type => :controller do
             post :create
             }.to change(Proctor, :count).by(0)
         end
-         
+        it "should redirect to the proctor show page and show success message" do
+            post :create, :proctor => @proctor
+            response.should redirect_to new_examinationroom_path
+        end
+
     end
 
   

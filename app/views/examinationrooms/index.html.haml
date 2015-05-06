@@ -1,6 +1,12 @@
 <html>
 -#  This file is app/views/examinationrooms/index.html.haml
+
+.head
+
+
+%br
 %h1 Proctor Management Module
+
 
 =flash[:title] 
 <br>
@@ -19,10 +25,10 @@
 
 .containner
   .containerLeft
-  
-    = form_tag examinationrooms_path, method: 'get' do
-      = text_field_tag :search, params[:search]
-      = submit_tag "Search", :name => nil
+    %br
+    
+    %br
+    %br
       
     
 
@@ -44,10 +50,11 @@
   .containerRight1  
   
   
-    = form_tag examinationrooms_path(@firstname), method: 'get' do
-      = text_field_tag :searchname, params[:searchname]
+  
+    = form_tag examinationrooms_path, method: 'get' do
+      = label_tag(:q, "Search :")
+      = text_field_tag :searchname ,params[:searchname]
       = submit_tag "Search", :name => nil
-     
   
 
     %table#proctors
@@ -57,14 +64,16 @@
           %th Firstname
           %th Lastname
           %th Position 
-          %th Room_id
+          %th Room_name
           %th More Info
         %tbody
         - @proctor.each do |proctor|
+      
           %tr
             %td= proctor.proctor_id
             %td= proctor.firstname
             %td= proctor.lastname
             %td= proctor.position
             %td= proctor.procroom_id
+                  
             %td= link_to "Details about #{proctor.firstname}", examinationroom_path(proctor.proctor_id)

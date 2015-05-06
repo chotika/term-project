@@ -18,14 +18,14 @@ Background: proctor have been added to database
 #Happy Path
 Scenario: User can find proctor in database
     Given I am on the Proctor Management Module home page
-    When I fill in "Search" with "Mook"
-    Then I should be on the Search by Name page
+    When I fill in "searchname" with "Mook"
+    Then I should be on the Proctor Management Module home page
     And I should see "Mook"
 
 #Sad Path
 Scenario: User can not find proctor in database
     Given I am on the Proctor Management Module home page
-    When I fill in "Search" with "Mookravee"
-    Then I should be on the Search by Name page
+    When I fill in "searchname" with "Mookravee"
+    Then I should be on the Proctor Management Module home page
     And I should not see "Mookravee"
   
