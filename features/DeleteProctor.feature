@@ -20,7 +20,7 @@ Background: proctor have been added to database
 Scenario: User can delete proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
+    Then I should be on the Show Existing Proctor page
     When I press "Delete"
     Then I should be on the Proctor Management Module home page
     And I should not see "Mook" 
@@ -29,7 +29,7 @@ Scenario: User can delete proctor in database
 Scenario: User cannot delete proctor in database
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
+    Then I should be on the Show Existing Proctor page
     When I press "Delete"
     Then I should be on the Proctor Management Module home page
     And I should see "Mook"

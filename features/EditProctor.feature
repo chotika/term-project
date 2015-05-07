@@ -7,32 +7,30 @@ Background: proctor have been added to database
 
   Given the following proctor exist:
   | proctor_id   | firstname | lastname     |  position   | procroom_id   |
-  | 1            | Mookravee | Chew         |  Professor  | 406           |
+  | 1            | Mookkuk   | Chew         |  Professor  | 406           |
   | 2            | Mind      | Lovely       |  Professor  | 407           |
   | 3            | Dew       | Jane         |  Officer    | 408           |
   | 4            | Ice       | Papit        |  Professor  | 409           |
   | 5            | Prim      | Plp          |  Officer    | 410           |
    
-  And I am on the Proctor Management Module home page 
+  Given I am on the Proctor Management Module home page
+  When I follow "Details about Mookkuk"
+  Then I should be on the Show Existing Proctor page
+  When I follow "Edit"
+  Then I should be on the Edit Existing Proctor page
+
 
 #Happy Path
 Scenario: User can edit proctor in database
-    Given I am on the Proctor Management Module home page
-    When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
-    When I change in "Firstname" from "Mook" with "Mookravee"
-    And I press "Update Proctor Info"
-    Then I should be on the Proctor Management Module home page
-    And I should see "Mookravee"
-
-#Sad Path
-Scenario: User can not edit proctor in database
-    Given I am on the Proctor Management Module home page
-    When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
-    When I fill in "Firstname" with "Mookravee"
+    When I fill in "Firstname" with "Mook"
     And I press "Update Proctor Info"
     Then I should be on the Proctor Management Module home page
     And I should see "Mook"
+
+#Sad Path
+Scenario: User can not edit proctor in database
+    When I fill in "Firstname" with ""
+    And I press "Update Proctor Info"
+    Then I should be on the Proctor Management Module home page
+    And I should see "Firstname can't be blank"
     
-  

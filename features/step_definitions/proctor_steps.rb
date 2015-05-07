@@ -13,6 +13,3 @@ Given /the following proctor exist/ do |proctors_table|
   end
 end
 
-When /^(?:|I )change in "([^"]*)" from "([^"]*)" with "([^"]*)"$/ do |field, old, new|
-  fill_in(field, :from => old, :with => new)
-end

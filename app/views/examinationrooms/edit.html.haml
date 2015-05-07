@@ -5,13 +5,13 @@
 = form_tag examinationroom_path(@proctor), :method => :put do
 
   = flash[:notice]
-  = label :proctor, :firstname, "Firstname"
-  = text_field :proctor, 'firstname'
+  = label :proctor, :firstname, 'Firstname'
+  = text_field :proctor, :firstname
   
-  = label :proctor, :lastname, "Lastname"
+  = label :proctor, :lastname, 'Lastname'
   = text_field :proctor, 'lastname'
 
-  = label :proctor, :position, "Position"
+  = label :proctor, :position, 'Position'
   = select :proctor, :position, ['Professor','Officer']
   
 

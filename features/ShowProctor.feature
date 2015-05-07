@@ -20,13 +20,13 @@ Background: proctor have been added to database
 Scenario: User can see proctor's informations
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
+    Then I should be on the Show Existing Proctor page
     And I should see "Mook" 
     
 #Sad Path
 Scenario: User cannot see proctor's informations
     Given I am on the Proctor Management Module home page
     When I follow "Details about Mook"
-    Then I should be on the Edit Existing Proctor page
+    Then I should be on the Show Existing Proctor page
     And I should not see "Mook"
     

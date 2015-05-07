@@ -25,8 +25,11 @@ module NavigationHelpers
       '/examinationrooms/new'
     when /^the Edit Existing Proctor page/
       #id = proctorId($1)
-      "/examinationrooms/1"
-      
+      '/examinationrooms/1/edit'
+    when /^the Show Existing Proctor page/ 
+      '/examinationrooms/1'
+    when /^the Proctor Management Module page/
+      '/examinationrooms.1'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

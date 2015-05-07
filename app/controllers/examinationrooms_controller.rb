@@ -58,11 +58,11 @@ class ExaminationroomsController < ApplicationController
     @proctor = Proctor.find params[:id]
     if @proctor.update_attributes(params[:proctor])
       flash[:notice] = "#{@proctor.firstname} was successfully updated."
-      redirect_to examinationrooms_path(@proctor)
+      redirect_to examinationrooms_path
     else
       flash[:title] = "Update proctor_id : #{@proctor.proctor_id} name : #{@proctor.firstname} was failed"
       flash[:notice] = @proctor.errors.full_messages 
-      redirect_to examinationrooms_path(@proctor)
+      redirect_to examinationrooms_path
     end
   end
 

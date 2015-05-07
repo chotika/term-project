@@ -33,10 +33,10 @@ Scenario: can't add a proctor
   Given I am on the Proctor Management Module home page
   When I follow "Add Proctor"
   Then I should be on the Create Add a Proctor page
-  When I fill in "Firstname" with "Mook"
+  When I fill in "Firstname" with ""
   And I fill in "Lastname" with "Chew"
   And I select "Professor" from "Position"
   And I press "Add"
   Then I should be on the Create Add a Proctor page
-  And I should not see "Mook"
+  And I should see "Firstname can't be blank"
   
