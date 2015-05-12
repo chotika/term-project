@@ -1,17 +1,18 @@
 %h1 Add Proctor
+
 = form_tag examinationrooms_path do
   
   = flash[:notice]
   = label :proctor, :firstname, 'Firstname'
   = text_field :proctor, :firstname ,placeholder: " Firstname can't be blank"
-  
+
   = label :proctor, :lastname, 'Lastname'
   = text_field :proctor, :lastname ,placeholder: " Lastname can't be blank"
- 
+
   = label :proctor, :position, 'Position'
   = select :proctor, :position, ['Professor','Officer']
-  
+
   = submit_tag 'Add'
-  
+
 %a.m5{:href => "/"} Back to home
 

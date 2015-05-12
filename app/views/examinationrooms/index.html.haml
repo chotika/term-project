@@ -5,57 +5,51 @@
 
 
 %br
-%h1 Proctor Management Module
 
+%h12
+  %img{src: "assets/topicSoften.png", :height => "210", :width => "1120"}
+
+<br>
 
 =flash[:title] 
+=flash[:notice]
 <br>
-= flash[:notice]
+
+.se
+  = form_tag examinationrooms_path, method: 'get' do
+    = label_tag(:q, "Search :")
+    = text_field_tag :searchname ,params[:searchname]
+    = submit_tag "Search", :name => nil
+
 <br>
-%a.m5{:href => "/"} HOME
-%a.m5{:href => "/abouts"} ABOUT US
 
-
-.link
-  
-  =link_to 'Add Proctor', new_examinationroom_path
-
-   
+%table#nav
+  %thead
+    %tr
+      %th= link_to "Home", examinationrooms_path
+      %th= link_to "About Us", abouts_path
+      %th= link_to "Add Proctor", new_examinationroom_path
 
 
 .containner
   .containerLeft
-    %br
-    
-    %br
-    %br
-      
-    
-
+  
     %table#examinationrooms
       %thead
         %tr
           %th Room_id
           %th Room_name
           %th Date_time
-          
+        
       %tbody
         - @examinationrooms.each do |examinationroom|
           %tr
             %td= examinationroom.room_id
             %td= examinationroom.room_name
             %td= examinationroom.date_time
-           
-
+         
+         
   .containerRight1  
-  
-  
-  
-    = form_tag examinationrooms_path, method: 'get' do
-      = label_tag(:q, "Search :")
-      = text_field_tag :searchname ,params[:searchname]
-      = submit_tag "Search", :name => nil
-  
 
     %table#proctors
       %thead
@@ -67,13 +61,13 @@
           %th Room_name
           %th More Info
         %tbody
-        - @proctor.each do |proctor|
-      
-          %tr
-            %td= proctor.proctor_id
-            %td= proctor.firstname
-            %td= proctor.lastname
-            %td= proctor.position
-            %td= proctor.procroom_id
-                  
-            %td= link_to "Details about #{proctor.firstname}", examinationroom_path(proctor.proctor_id)
+          - @proctor.each do |proctor|
+            %tr
+              %td= proctor.proctor_id
+              %td= proctor.firstname
+              %td= proctor.lastname
+              %td= proctor.position
+              %td= proctor.procroom_id
+              
+              %td= link_to "Details about #{proctor.firstname}", examinationroom_path(proctor.proctor_id)
+          

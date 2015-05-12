@@ -7,17 +7,19 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: White;
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
+  background-color:#F7FFB6;
 }
 
 div#main {
   margin: 0;
   padding: 0 20px 20px;
+  background-color:#F7FFB6;
   
 }
+
 a {
   background: transparent;
   color: maroon;
@@ -42,6 +44,7 @@ h1.title {
   font-size: 2em;
   font-style: normal;
 }
+
 
 #notice #warning {
   background: rosybrown;
@@ -126,35 +129,73 @@ table#proctors tr:hover td{
   
 }
 .link{
-background:#d9dcde;
-	background: -moz-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
-	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#d9dcde),color-stop(100%,#d9dcde));
-	background: -webkit-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
-	background: -o-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
-	background: -ms-linear-gradient(top,#d9dcde 0%,#d9dcde 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9dcde',endColorstr='#d9dcde',GradientType=0);
+  background:#d9dcde;
 	padding:5px 4px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
 	font-size:12px;
-	width:80px;
+	width:100px;
 	border-radius:4px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border:3px solid #5e5e5e
+	border:3px solid #5e5e5e;
+	text-align:center;
+	margin-left:100px;
   
 }
+
+.se{
+  float:right;
+  margin-right:100px;
+}
 	.containner{
-	  width:1000;
-	}
+	  width:1200px;
+	  height:auto;
+	  background-color:green;
+	  border:10px;
+	  border-color:#000;
+}
+	
 	.containerLeft {
 	float:left;
 	width:600px;
+	margin-left:100px;
 }
 	.containerRight1 {
-  float:left;
+	float:right;
 	width:400px;
+	margin-right:100px;
+}
+  .wrap{
+    alignment-adjust:center;
+    margin-left:auto;
+    margin-right:auto;
+    border:3px;
 }
 
+
+  h12 {
+  margin-left:100px;
+  margin-right:100px;
+}
+
+table#nav{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size:12px;
+  width:1200px;
+  text-align:left;
+  border:1px solid #fff;
+  margin:20px;
+  margin-left:60px;
+
+  
+}
+
+table#nav th{
+  font-weight:bold;
+  text-align: center;
+  font-size:14px;
+  color:#000;
+  padding:15px 10px 10px;
+  background:#BCBCBC;
+}
 
 
