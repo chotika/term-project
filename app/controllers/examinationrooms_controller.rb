@@ -1,10 +1,6 @@
 class ExaminationroomsController < ApplicationController
   
   def index
-    #@proctor = Proctor.all
-    #@examinationrooms = Examinationroom.search(params[:search])
-    #@examinationrooms = Examinationroom.all
-    
     if params[:search] != nil 
        
         if params[:search] == 'one'
@@ -18,8 +14,6 @@ class ExaminationroomsController < ApplicationController
     if params[:searchname] != nil
 
         @proctor = Proctor.searchname(params[:searchname])
-        
-        
     else    
         @proctor = Proctor.all
     end
@@ -32,7 +26,7 @@ class ExaminationroomsController < ApplicationController
   def errors
     @errors = ActiveModel::Errors.new(self)
   end
- def create
+  def create
  
    @proctor = Proctor.new(params[:proctor])
    if @proctor.save
@@ -76,7 +70,5 @@ class ExaminationroomsController < ApplicationController
   def is_numeric?(obj) 
      obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
   end
-  
-  
-  
+
 end

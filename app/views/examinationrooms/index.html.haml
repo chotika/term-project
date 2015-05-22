@@ -1,14 +1,9 @@
 <html>
 -#  This file is app/views/examinationrooms/index.html.haml
-
 .head
-
-
 %br
-
 %h12
   %img{src: "assets/topicSoften.png", :height => "210", :width => "1120"}
-
 <br>
 
 =flash[:title] 
@@ -27,8 +22,9 @@
   %thead
     %tr
       %th= link_to "Home", examinationrooms_path
-      %th= link_to "About Us", abouts_path
       %th= link_to "Add Proctor", new_examinationroom_path
+      %th= link_to "About Us", abouts_path
+      
 
 
 .containner

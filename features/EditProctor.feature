@@ -34,3 +34,11 @@ Scenario: User can not edit proctor in database
     Then I should be on the Proctor Management Module home page
     And I should see "Firstname can't be blank"
     
+    
+    
+    
+    
+    
+    
+    
+    

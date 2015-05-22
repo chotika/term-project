@@ -22,10 +22,6 @@ class Proctor < ActiveRecord::Base
        end
      end
      
-  
-     
-   
-     
      validates :firstname, :presence => true #{ :message => "Registration name can't be blank" }
      validates :lastname, :presence => true #{ :message => "Registration name can't be blank" }
      validates :position, :presence => true # { :message => "Registration name can't be blank" }
