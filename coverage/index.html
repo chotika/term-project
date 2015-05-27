@@ -14,7 +14,7 @@
       <img src="./assets/0.9.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-12T07:40:42+00:00">2015-05-12T07:40:42+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-27T10:35:21+00:00">2015-05-27T10:35:21+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#7fd6c09fa92c8e015b8b1fcf9708cd0e8478f9a7" class="src_link" title="app/controllers/examinationrooms_controller.rb">app/controllers/examinationrooms_controller.rb</a></td>
         <td class="yellow strong">85.0 %</td>
-        <td>82</td>
+        <td>74</td>
         <td>40</td>
         <td>34</td>
         <td>6</td>
@@ -103,7 +103,7 @@
       <tr>
         <td class="strong"><a href="#74f184655763b9520c4a28374b3a2edc29d6514a" class="src_link" title="app/models/proctor.rb">app/models/proctor.rb</a></td>
         <td class="red strong">75.0 %</td>
-        <td>32</td>
+        <td>28</td>
         <td>16</td>
         <td>12</td>
         <td>4</td>
@@ -171,7 +171,7 @@
       <tr>
         <td class="strong"><a href="#7fd6c09fa92c8e015b8b1fcf9708cd0e8478f9a7" class="src_link" title="app/controllers/examinationrooms_controller.rb">app/controllers/examinationrooms_controller.rb</a></td>
         <td class="yellow strong">85.0 %</td>
-        <td>82</td>
+        <td>74</td>
         <td>40</td>
         <td>34</td>
         <td>6</td>
@@ -228,7 +228,7 @@
       <tr>
         <td class="strong"><a href="#74f184655763b9520c4a28374b3a2edc29d6514a" class="src_link" title="app/models/proctor.rb">app/models/proctor.rb</a></td>
         <td class="red strong">75.0 %</td>
-        <td>32</td>
+        <td>28</td>
         <td>16</td>
         <td>12</td>
         <td>4</td>
@@ -517,475 +517,427 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">    #@proctor = Proctor.all</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">    #@examinationrooms = Examinationroom.search(params[:search])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">    #@examinationrooms = Examinationroom.all</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby">    </code>
-        </li>
-      
-        <li class="covered" data-hits="23" data-linenumber="8">
+        <li class="covered" data-hits="23" data-linenumber="4">
           <span class="hits">23</span>
           
           <code class="ruby">    if params[:search] != nil </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">       </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="6">
           
           
           <code class="ruby">        if params[:search] == 'one'</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
           <code class="ruby">          @examinationrooms = Examinationroom.search(params[:search])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="8">
           
           
           <code class="ruby">          @proctor = Proctor.searchname('1')</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">    else </code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="15">
+        <li class="covered" data-hits="23" data-linenumber="11">
           <span class="hits">23</span>
           
           <code class="ruby">        @examinationrooms = Examinationroom.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">    end    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="18">
+        <li class="covered" data-hits="23" data-linenumber="14">
           <span class="hits">23</span>
           
           <code class="ruby">    if params[:searchname] != nil</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">        @proctor = Proctor.searchname(params[:searchname])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">    else    </code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="24">
+        <li class="covered" data-hits="23" data-linenumber="18">
           <span class="hits">23</span>
           
           <code class="ruby">        @proctor = Proctor.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="28">
+        <li class="covered" data-hits="2" data-linenumber="22">
           <span class="hits">2</span>
           
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="29">
+        <li class="covered" data-hits="4" data-linenumber="23">
           <span class="hits">4</span>
           
           <code class="ruby">    @proctor = Proctor.new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="32">
+        <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
           <code class="ruby">  def errors</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="missed" data-hits="0" data-linenumber="27">
           
           
           <code class="ruby">    @errors = ActiveModel::Errors.new(self)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="35">
+        <li class="covered" data-hits="2" data-linenumber="29">
           <span class="hits">2</span>
           
-          <code class="ruby"> def create</code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby"> </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="37">
+        <li class="covered" data-hits="5" data-linenumber="31">
           <span class="hits">5</span>
           
           <code class="ruby">   @proctor = Proctor.new(params[:proctor])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="38">
+        <li class="covered" data-hits="5" data-linenumber="32">
           <span class="hits">5</span>
           
           <code class="ruby">   if @proctor.save</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="39">
+        <li class="covered" data-hits="3" data-linenumber="33">
           <span class="hits">3</span>
           
           <code class="ruby">     flash[:notice] = &quot;#{@proctor.firstname} was successfully created.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="40">
+        <li class="covered" data-hits="3" data-linenumber="34">
           <span class="hits">3</span>
           
           <code class="ruby">      redirect_to new_examinationroom_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">  else</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">    #  render :action =&gt; :new #note , 'new' template can access @proctor's field values!</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="43">
+        <li class="covered" data-hits="2" data-linenumber="37">
           <span class="hits">2</span>
           
           <code class="ruby">      redirect_to new_examinationroom_path , notice: @proctor.errors.full_messages </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">   end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="47">
+        <li class="covered" data-hits="2" data-linenumber="41">
           <span class="hits">2</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="48">
+        <li class="covered" data-hits="7" data-linenumber="42">
           <span class="hits">7</span>
           
           <code class="ruby">    id = params[:id] # retrieve movie ID from URI route</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="49">
+        <li class="covered" data-hits="7" data-linenumber="43">
           <span class="hits">7</span>
           
           <code class="ruby">    @proctor = Proctor.find params[:id] # look up movie by unique ID</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="53">
+        <li class="covered" data-hits="2" data-linenumber="47">
           <span class="hits">2</span>
           
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="54">
+        <li class="covered" data-hits="3" data-linenumber="48">
           <span class="hits">3</span>
           
           <code class="ruby">    @proctor = Proctor.find params[:id]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">   </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="57">
+        <li class="covered" data-hits="2" data-linenumber="51">
           <span class="hits">2</span>
           
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="58">
+        <li class="covered" data-hits="2" data-linenumber="52">
           <span class="hits">2</span>
           
           <code class="ruby">    @proctor = Proctor.find params[:id]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="59">
+        <li class="covered" data-hits="2" data-linenumber="53">
           <span class="hits">2</span>
           
           <code class="ruby">    if @proctor.update_attributes(params[:proctor])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="60">
+        <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;#{@proctor.firstname} was successfully updated.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to examinationrooms_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:title] = &quot;Update proctor_id : #{@proctor.proctor_id} name : #{@proctor.firstname} was failed&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="58">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = @proctor.errors.full_messages </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="65">
+        <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to examinationrooms_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="68">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="69">
+        <li class="covered" data-hits="2" data-linenumber="63">
           <span class="hits">2</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="70">
+        <li class="covered" data-hits="3" data-linenumber="64">
           <span class="hits">3</span>
           
           <code class="ruby">    @proctor = Proctor.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="71">
+        <li class="covered" data-hits="3" data-linenumber="65">
           <span class="hits">3</span>
           
           <code class="ruby">    @proctor.destroy</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="72">
+        <li class="covered" data-hits="3" data-linenumber="66">
           <span class="hits">3</span>
           
           <code class="ruby">    flash[:notice] = &quot;Proctor '#{@proctor.firstname}' deleted.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="73">
+        <li class="covered" data-hits="3" data-linenumber="67">
           <span class="hits">3</span>
           
           <code class="ruby">    redirect_to examinationrooms_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="76">
+        <li class="covered" data-hits="2" data-linenumber="70">
           <span class="hits">2</span>
           
           <code class="ruby">  def is_numeric?(obj) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="77">
+        <li class="missed" data-hits="0" data-linenumber="71">
           
           
           <code class="ruby">     obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="81">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="74">
           
           
           <code class="ruby">end</code>
@@ -1393,49 +1345,25 @@
           <code class="ruby">     </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby">     </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">   </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">     </code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="29">
+        <li class="covered" data-hits="2" data-linenumber="25">
           <span class="hits">2</span>
           
           <code class="ruby">     validates :firstname, :presence =&gt; true #{ :message =&gt; &quot;Registration name can't be blank&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="30">
+        <li class="covered" data-hits="2" data-linenumber="26">
           <span class="hits">2</span>
           
           <code class="ruby">     validates :lastname, :presence =&gt; true #{ :message =&gt; &quot;Registration name can't be blank&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="31">
+        <li class="covered" data-hits="2" data-linenumber="27">
           <span class="hits">2</span>
           
           <code class="ruby">     validates :position, :presence =&gt; true # { :message =&gt; &quot;Registration name can't be blank&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end    </code>

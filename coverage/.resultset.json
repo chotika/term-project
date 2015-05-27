@@ -26,10 +26,6 @@
         1,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
         22,
         null,
         0,
@@ -43,8 +39,6 @@
         22,
         null,
         0,
-        null,
-        null,
         null,
         22,
         null,
@@ -102,8 +96,6 @@
         0,
         null,
         null,
-        null,
-        null,
         null
       ],
       "/home/ubuntu/workspace/term-project/app/models/examinationroom.rb": [
@@ -165,17 +157,13 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1431416396
+    "timestamp": 1432722921
   },
   "RSpec": {
     "coverage": {
@@ -204,10 +192,6 @@
         1,
         null,
         1,
-        null,
-        null,
-        null,
-        null,
         1,
         null,
         0,
@@ -221,8 +205,6 @@
         1,
         null,
         0,
-        null,
-        null,
         null,
         1,
         null,
@@ -278,8 +260,6 @@
         null,
         1,
         0,
-        null,
-        null,
         null,
         null,
         null
@@ -343,16 +323,12 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1431416442
+    "timestamp": 1432722783
   }
 }
